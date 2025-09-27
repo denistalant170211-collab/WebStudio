@@ -1,0 +1,12 @@
+.god {
+    color: aqua;
+}
+h1 {
+    color: aliceblue;
+}
+h1 + button {
+    background-color: aqua;
+}
+.blue-button {
+    background-color: aqua;
+}
