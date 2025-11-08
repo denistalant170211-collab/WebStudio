@@ -5,6 +5,14 @@
     letter-spacing: 0.02em;
     color: #2196f3;
 }
+.container {
+    outline: solid red;
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .header-portfolio {
     font-family: "Roboto";
@@ -71,6 +79,7 @@
 
 .hero {
     background-color: #2F303A;
+    padding-bottom: 94px;
 }
 
 .about-text {
@@ -94,6 +103,11 @@
 .about-img {
     width: 370px;
     height: 294px;
+}
+
+.about-list {
+    padding-bottom: 94px;
+    padding-top: 94px;
 }
 
 .team-title {
