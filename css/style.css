@@ -5,6 +5,12 @@
     letter-spacing: 0.02em;
     color: #2196f3;
 }
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
 .container {
     outline: solid red;
     width: 1170px;
@@ -46,6 +52,7 @@
     color: #757575;
 }
 
+
 .hero-title {
     font-family: "Roboto";
     font-weight: 900;
@@ -77,8 +84,15 @@
     color: #212121;
 }
 
+
 .hero {
     background-color: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.about {
+    padding-top: 94px;
     padding-bottom: 94px;
 }
 
@@ -105,10 +119,6 @@
     height: 294px;
 }
 
-.about-list {
-    padding-bottom: 94px;
-    padding-top: 94px;
-}
 
 .team-title {
     font-family: "Roboto";
@@ -150,6 +160,8 @@
 
 .team {
     background-color: #F5F4FA;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .header-logo {
@@ -159,6 +171,7 @@
     letter-spacing: 0.03em;
     color: #2196f3;
 }
+
 
 .span {
     font-family: "Raleway";
@@ -213,6 +226,13 @@ address {
 
 .footer {
     background-color: #2F303A;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.main {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .main-all {
