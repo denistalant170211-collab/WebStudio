@@ -55,6 +55,18 @@
     gap: 50px;
 }
 
+.header-portfolio:hover {
+    color: #2196F3;
+}
+
+.header-contacts:hover {
+    color: #2196F3;
+}
+
+.header-tel:hover {
+    color: #2196F3;
+}
+
 .header-portfolio {
     font-family: "Roboto";
     font-weight: 500;
@@ -111,6 +123,7 @@
     background-color: #2196F3;
     border-radius: 4px;
     padding: 10px 32px;
+    border-style: none;
 }
 
 .about-subtitle {
@@ -282,6 +295,7 @@ address {
     letter-spacing: 0.03em;
     color: #fff;
     margin-bottom: 9px;
+    font-style: normal;
 }
 
 .footer-tel {
@@ -332,7 +346,7 @@ address {
     color: #212121;
 }
 
-.main-all:hover {
+.main-button:hover {
     background-color: #2196F3;
     color: #fff;
 }
@@ -393,6 +407,10 @@ input[type="button"] {
     margin-bottom: 50px;
 }
 
+.main-div {
+    padding: 20px 24px;
+}
+
 .main-subtitle {
     font-family: "Roboto";
     font-weight: 700;
@@ -400,10 +418,7 @@ input[type="button"] {
     line-height: 200%;
     letter-spacing: 0.06em;
     color: #212121;
-    margin-top: 20px;
     margin-bottom: 4px;
-    margin-right: 24px;
-    margin-left: 24px;
 }
 
 .main-text {
@@ -413,13 +428,12 @@ input[type="button"] {
     line-height: 187%;
     letter-spacing: 0.03em;
     color: #757575;
-    margin-right: 24px;
-    margin-left: 24px;
 }
 
 .main-button {
     padding: 6px 25px;
     border-radius: 4px;
+    border-style: none;
 }
 
 .main-list {
@@ -454,4 +468,8 @@ input[type="button"] {
     font-size: 14px;
     letter-spacing: 0.02em;
     color: #212121;
+}
+
+.header-studio-page2:hover {
+    color: #2196f3;
 }
