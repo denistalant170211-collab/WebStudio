@@ -3,7 +3,7 @@
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
-    color: #2196f3;
+    color: #212121;
 }
 
 .header {
@@ -23,6 +23,18 @@
     display: flex;
     align-items: center;
 
+}
+
+.header-portfolio-page2:hover {
+    color: #2196F3;
+}
+
+.header-email:hover {
+    color: #2196F3;
+}
+
+.header-studio:hover {
+    color: #2196F3;
 }
 
 .header-list {
@@ -64,7 +76,7 @@
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
-    color: #2196f3;
+    color: #212121;
 }
 
 .header-email {
@@ -72,7 +84,7 @@
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
-    color: #757575;
+    color: #212121;
 }
 
 
@@ -85,6 +97,7 @@
     text-transform: uppercase;
     text-align: center;
     color: #fff;
+    max-width: 696px;
 }
 
 .hero-button {
@@ -96,6 +109,8 @@
     text-align: center;
     color: #fff;
     background-color: #2196F3;
+    border-radius: 4px;
+    padding: 10px 32px;
 }
 
 .about-subtitle {
@@ -185,7 +200,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    background-color: #fff;
 }
 
 .team-img {
@@ -201,6 +216,7 @@
     letter-spacing: 0.03em;
     text-align: center;
     color: #212121;
+    margin-bottom: 10px;
 }
 
 .team-text {
@@ -313,8 +329,12 @@ address {
     line-height: 162%;
     letter-spacing: 0.03em;
     text-align: center;
-    color: #fff;
+    color: #212121;
+}
+
+.main-all:hover {
     background-color: #2196F3;
+    color: #fff;
 }
 
 .main-web {
@@ -382,6 +402,8 @@ input[type="button"] {
     color: #212121;
     margin-top: 20px;
     margin-bottom: 4px;
+    margin-right: 24px;
+    margin-left: 24px;
 }
 
 .main-text {
@@ -391,6 +413,13 @@ input[type="button"] {
     line-height: 187%;
     letter-spacing: 0.03em;
     color: #757575;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.main-button {
+    padding: 6px 25px;
+    border-radius: 4px;
 }
 
 .main-list {
@@ -406,6 +435,7 @@ input[type="button"] {
 }
 
 .main-item-button {
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
 }
@@ -423,5 +453,5 @@ input[type="button"] {
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
-    color: #2196f3;
+    color: #212121;
 }
