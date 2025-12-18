@@ -170,38 +170,37 @@
     flex-direction: column;
     position: relative;
     padding-top: 120px;
-
 }
 
 .about-item::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 100px;
-    width: 70px;
-    height: 70px;
+    width: 270px;
+    height: 120px;
+    top: -30px;
+    left: 0;
+    background-position: center;
     background-color: #F5F4FA;
     background-repeat: no-repeat;
-    background-position: center;
 }
 
 .about-item:nth-child(1)::before {
-    background-image: url("/img/antenna\ 1.png");
+    background-image: url("/img/antenna.png");
 }
 
 
 .about-item:nth-child(2)::before {
-    background-image: url("/img/clock\ 1.png");
+    background-image: url("/img/clock.png");
 }
 
 
 .about-item:nth-child(3)::before {
-    background-image: url("/img/diagram\ 1.png");
+    background-image: url("/img/diagram.png");
 }
 
 
 .about-item:nth-child(4)::before {
-    background-image: url("/img/astronaut\ 1.png");
+    background-image: url("/img/astronaut.png");
 }
 
 
