@@ -126,6 +126,14 @@
     border-style: none;
 }
 
+.hero {
+    background-image: url("/img/hero-background.webp");
+    background-position: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+
 .about-subtitle {
     font-family: "Roboto";
     font-weight: 700;
@@ -253,6 +261,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
 }
 
 .team-img {
@@ -473,6 +482,7 @@ input[type="button"] {
     padding: 6px 25px;
     border-radius: 4px;
     border-style: none;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
 }
 
 .main-list {
@@ -485,6 +495,8 @@ input[type="button"] {
     display: flex;
     flex-direction: column;
     width: calc((100% - 60px) / 3);
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
 }
 
 .main-item-button {
