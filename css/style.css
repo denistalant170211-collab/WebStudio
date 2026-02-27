@@ -346,6 +346,57 @@
     fill: #ffffff;
 }
 
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: #ffffff;
+}
+
+.clients-title {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #212121;
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.clients-item {
+    width: 170px;
+    height: 92px;
+}
+
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.clients-link:hover {
+    border-color: #2196F3;
+}
+
+.clients-icon {
+    fill: #AFB1B8;
+    transition: fill 0.3s;
+}
+
+.clients-link:hover .clients-icon {
+    fill: #2196F3;
+}
+
 
 .footer {
     background-color: #2F303A;
