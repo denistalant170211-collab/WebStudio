@@ -10,112 +10,134 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </head>
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/reset.css">
 
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container header-container">
             <h1 class="header-logo">Web<span class="header-span">Studio</span></h1>
             <nav class="header-nav">
                 <ul class="header-list">
-                    <li class="header-item"><a class="header-studio-page2" href="./index.html">Студія</a></li>
-                    <li class="header-item"><a class="header-portfolio-page2" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="header-item"><a class="header-studio" href="./index.html">Студія</a></li>
+                    <li class="header-item"><a class="header-portfolio active" href="./portfolio.html">Портфоліо</a></li>
                     <li class="header-item"><a class="header-contacts" href="">Контакти</a></li>
                 </ul>
             </nav>
             <ul class="header-list-2">
                 <li class="header-contact-item">
-                    <a class="header-email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <a class="header-email" href="mailto:info@devstudio.com">
+                        <svg class="header-contact-icon" width="16" height="16"><use href="./img/symbol-defs.svg#icon-massege"></use></svg>
+                        info@devstudio.com</a>
                 </li>
                 <li class="header-contact-item">
-                    <a class="header-tel" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <a class="header-tel" href="tel:+380961111111">
+                        <svg class="header-contact-icon" width="16" height="16"><use href="./img/symbol-defs.svg#icon-tel"></use></svg>
+                        +38 096 111 11 11</a>
                 </li>
             </ul>
-
-
         </div>
     </header>
+
     <main>
         <section class="main">
             <div class="container">
                 <ul class="main-list-button">
                     <li class="main-item-button"><button class="main-all main-button" type="button">Усі</button></li>
-                    <li class="main-item-button"><button class="main-web main-button" type="button">Веб-сайти</button>
-                    </li>
-                    <li class="main-item-button"><button class="main-addition main-button"
-                            type="button">Додатки</button></li>
-                    <li class="main-item-button"><button class="main-design main-button" type="button">Дизайн</button>
-                    </li>
-                    <li class="main-item-button"><button class="main-marketing main-button"
-                            type="button">Маркетинг</button></li>
+                    <li class="main-item-button"><button class="main-web main-button" type="button">Веб-сайти</button></li>
+                    <li class="main-item-button"><button class="main-addition main-button" type="button">Додатки</button></li>
+                    <li class="main-item-button"><button class="main-design main-button" type="button">Дизайн</button></li>
+                    <li class="main-item-button"><button class="main-marketing main-button" type="button">Маркетинг</button></li>
                 </ul>
 
                 <ul class="main-list">
                     <li class="main-item">
-                        <img class="main-img" src="./img/laptop.webp" alt="laptop">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/laptop.webp" alt="laptop">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Технокряк</h3>
                             <p class="main-text">Веб-сайт</p>
                         </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/basketball.webp" alt="basketball">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/basketball.webp" alt="basketball">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Постер New Orlean vs Golden Star</h3>
                             <p class="main-text">Дизайн</p>
                         </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/RESTAURANT.webp" alt="RESTAURANT">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/RESTAURANT.webp" alt="RESTAURANT">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Ресторан Seafood</h3>
                             <p class="main-text">Додаток</p>
-                            <div>
-
+                        </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/headphones.webp" alt="headphones">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/headphones.webp" alt="headphones">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Проєкт Prime</h3>
                             <p class="main-text">Маркетинг</p>
                         </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/boxs.webp" alt="boxs">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/boxs.webp" alt="boxs">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Проєкт Boxes</h3>
                             <p class="main-text">Додаток</p>
                         </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/computer.webp" alt="computer">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/computer.webp" alt="computer">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Inspiration has no Borders</h3>
                             <p class="main-text">Веб-сайт</p>
                         </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/book.webp" alt="book">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/book.webp" alt="book">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Видання Limited Edition</h3>
                             <p class="main-text">Дизайн</p>
                         </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/suspension.webp" alt="suspension">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/suspension.webp" alt="suspension">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Проєкт LAB</h3>
                             <p class="main-text">Маркетинг</p>
                         </div>
                     </li>
                     <li class="main-item">
-                        <img class="main-img" src="./img/work-laptop.webp" alt="work-laptop">
+                        <div class="main-img-wrap">
+                            <img class="main-img" src="./img/work-laptop.webp" alt="work-laptop">
+                            <p class="main-overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                        </div>
                         <div class="main-div">
                             <h3 class="main-subtitle">Growing Business</h3>
                             <p class="main-text">Додаток</p>
@@ -125,21 +147,37 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="container footer-container">
-            <h1 class="footer-logo">Web<span class="footer-span">Studio</span></h1>
-            <address class="footer-address">м. Київ, пр-т Лесі Українки, 26</address>
-            <ul class="footer-list">
-                <li class="footer-item">
-                    <a class="footer-tel" href="tel:+380961111111">+38 096 111 11 11</a>
-                </li>
-                <li class="footer-item">
-                    <a class="footer-email" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                </li>
-            </ul>
+            <div class="footer-info">
+                <h2 class="footer-logo">Web<span class="footer-span">Studio</span></h2>
+                <address class="footer-address">м. Київ, пр-т Лесі Українки, 26</address>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a class="footer-contact-link" href="mailto:info@devstudio.com">
+                            <svg class="footer-contact-icon" width="16" height="16"><use href="./img/symbol-defs.svg#icon-massege"></use></svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a class="footer-contact-link" href="tel:+380961111111">
+                            <svg class="footer-contact-icon" width="16" height="16"><use href="./img/symbol-defs.svg#icon-tel"></use></svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <p class="footer-social-title">ПРИЄДНУЙТЕСЬ</p>
+                <ul class="footer-social-list">
+                    <li class="footer-social-item"><a class="footer-social-link" href="#"><svg class="footer-social-icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-instagram"></use></svg></a></li>
+                    <li class="footer-social-item"><a class="footer-social-link" href="#"><svg class="footer-social-icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-twitter"></use></svg></a></li>
+                    <li class="footer-social-item"><a class="footer-social-link" href="#"><svg class="footer-social-icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-facebook"></use></svg></a></li>
+                    <li class="footer-social-item"><a class="footer-social-link" href="#"><svg class="footer-social-icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-linkedin"></use></svg></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
-
 </body>
-
 </html>
