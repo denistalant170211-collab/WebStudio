@@ -1,0 +1,182 @@
+.footer {
+  background-color: $color-footer-bg;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+.footer-logo {
+  font-family: $font-raleway;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+  color: $color-primary;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.footer-span {
+  font-family: $font-raleway;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+  color: $color-white;
+}
+
+.footer-address {
+  @include font-roboto(400, 14px, 171%);
+  letter-spacing: 0.03em;
+  color: $color-white;
+  margin-bottom: 9px;
+  font-style: normal;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include font-roboto(400, 14px, 171%);
+  letter-spacing: 0.03em;
+  color: $color-footer-contact;
+  text-decoration: none;
+  transition: color $transition-base;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: $color-primary;
+}
+
+.footer-contact-icon {
+  fill: $color-footer-contact;
+  flex-shrink: 0;
+  transition: fill $transition-base;
+}
+
+.footer-contact-link:hover .footer-contact-icon,
+.footer-contact-link:focus .footer-contact-icon {
+  fill: $color-primary;
+}
+
+.footer-social {
+  padding-top: 12px;
+}
+
+.footer-social-title {
+  @include font-roboto(700, 14px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-social-link {
+  @include flex-center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color $transition-base;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: $color-primary;
+}
+
+.footer-social-icon {
+  fill: $color-white;
+  transition: fill $transition-base;
+}
+
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
+  fill: $color-white;
+}
+
+.footer-subscribe {
+  padding-top: 12px;
+  margin-left: auto;
+}
+
+.footer-subscribe-title {
+  @include font-roboto(700, 14px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 20px;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-subscribe-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 0 16px;
+  font-family: $font-roboto;
+  font-size: 16px;
+  color: $color-white;
+  outline: none;
+  transition: border-color $transition-base;
+}
+
+.footer-subscribe-input::placeholder {
+  color: $color-footer-contact;
+}
+
+.footer-subscribe-input:focus {
+  border-color: $color-primary;
+}
+
+.footer-subscribe-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
+  background-color: $color-primary;
+  color: $color-white;
+  @include font-roboto(700, 16px, 187%);
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color $transition-base, box-shadow $transition-base;
+}
+
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus {
+  background-color: $color-primary-dark;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-subscribe-icon {
+  fill: $color-white;
+}
