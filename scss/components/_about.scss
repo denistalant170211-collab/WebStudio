@@ -1,0 +1,97 @@
+.about {
+  padding-top: $spacing-94;
+  padding-bottom: 0;
+  background-color: $light-color;
+
+  &__list {
+    @include flex-gap($spacing-30);
+  }
+
+  &__item {
+    @include flex-column;
+    position: relative;
+    padding-top: $spacing-94;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 270px;
+      height: $spacing-120;
+      top: 0;
+      left: 0;
+      background-position: center;
+      background-color: $gray-light;
+      background-repeat: no-repeat;
+      border-radius: $border-radius-4;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url("/img/antenna.webp");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("/img/antenna.webp");
+    }
+
+    &:nth-child(3)::before {
+      background-image: url("/img/diagram.webp");
+    }
+
+    &:nth-child(4)::before {
+      background-image: url("/img/astronaut.webp");
+    }
+  }
+
+  &__title {
+    @include roboto($font-weight-bold, $fs-36, 1, $letter-spacing-03, $dark-color);
+    text-align: center;
+    margin-bottom: $spacing-50;
+  }
+
+  &__subtitle {
+    @include roboto($font-weight-bold, $fs-14, 1, $letter-spacing-03, $dark-color);
+    text-transform: uppercase;
+    margin-bottom: $spacing-10;
+    margin-top: $spacing-30;
+  }
+
+  &__text {
+    @include roboto($font-weight-light, $fs-14, $lh-171, $letter-spacing-03, $gray-color);
+  }
+
+  &__image-list {
+    @include flex-gap($spacing-30);
+    justify-content: center;
+  }
+
+  &__image-item {
+    @include flex-column;
+  }
+
+  &__image {
+    width: 370px;
+    height: 294px;
+  }
+
+  &__image-wrap {
+    position: relative;
+  }
+
+  &__image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: $spacing-27 0;
+    @include roboto($font-weight-bold, $fs-14, 1, $letter-spacing-03, $light-color);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $dark-overlay-strong;
+  }
+}
+
+.what-we-do {
+  padding-top: $spacing-94;
+  padding-bottom: $spacing-94;
+  background-color: $light-color;
+}

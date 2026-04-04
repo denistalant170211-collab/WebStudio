@@ -1,0 +1,233 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  @include flex-center;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  @include transitions(opacity, visibility);
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal {
+  position: relative;
+  background-color: $light-color;
+  border-radius: $border-radius-4;
+  padding: $spacing-40;
+  width: 528px;
+  transform: scale(1);
+  opacity: 1;
+  @include transitions(transform, opacity);
+
+  &__close {
+    position: absolute;
+    top: $spacing-8;
+    right: $spacing-8;
+    width: 30px;
+    height: 30px;
+    border-radius: $border-radius-50;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    cursor: pointer;
+    @include flex-center;
+    @include transition(border-color);
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+
+      svg path {
+        stroke: $primary-color;
+      }
+    }
+
+    svg path {
+      @include transition(stroke);
+    }
+  }
+
+  &__title {
+    @include roboto($font-weight-bold, $fs-20, 1, $letter-spacing-03, $dark-color);
+    text-align: center;
+    margin-bottom: $spacing-12;
+  }
+
+  &__form {
+    @include flex-column;
+    gap: $spacing-10;
+  }
+
+  &__field {
+    @include flex-column;
+    gap: $spacing-4;
+  }
+
+  &__label {
+    @include roboto($font-weight-light, $fs-12, 1, $letter-spacing-01, $gray-color);
+  }
+
+  &__input-wrap {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $input-border-transparent;
+    border-radius: $border-radius-4;
+    padding-left: $spacing-42;
+    outline: none;
+    @include roboto($font-weight-light, $fs-14, 1, $letter-spacing-03, $dark-color);
+    @include transition(border-color);
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &:focus {
+      border-color: $primary-color;
+
+      & ~ .modal__icon {
+        fill: $primary-color;
+      }
+    }
+
+    &.valid {
+      border-color: $success-color;
+    }
+
+    &.invalid {
+      border-color: $error-color;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: $spacing-12;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $dark-color;
+    @include transition(fill);
+    pointer-events: none;
+  }
+
+  &__error {
+    @include roboto($font-weight-light, $fs-11, 1, $letter-spacing-03, $error-color);
+    display: none;
+    margin-top: 2px;
+  }
+
+  &__input.invalid ~ &__error {
+    display: block;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid $input-border-transparent;
+    border-radius: $border-radius-4;
+    padding: $spacing-12 $spacing-16;
+    outline: none;
+    resize: none;
+    @include roboto($font-weight-light, $fs-14, 1, $letter-spacing-03, $dark-color);
+    @include transition(border-color);
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+    }
+
+    &.valid {
+      border-color: $success-color;
+    }
+
+    &.invalid {
+      border-color: $error-color;
+    }
+  }
+
+  &__checkbox-wrap {
+    @include flex-center;
+    gap: $spacing-8;
+    margin-top: $spacing-10;
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__checkbox-label {
+    @include roboto($font-weight-light, $fs-14, $lh-171, $letter-spacing-03, $gray-color);
+    @include flex-center;
+    gap: $spacing-8;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 15px;
+      border: 2px solid $dark-color;
+      border-radius: $border-radius-2;
+      flex-shrink: 0;
+      @include transitions(background-color, border-color, background-image);
+    }
+
+    &.invalid-check::before {
+      border-color: $error-color;
+    }
+  }
+
+  &__checkbox:checked + &__checkbox-label::before {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8'%3E%3Cpath d='M1.5 3.5L4 6L9.5 1' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__policy-link {
+    color: $primary-color;
+    @include transition(color);
+
+    &:hover {
+      color: $primary-hover;
+    }
+  }
+
+  &__submit {
+    align-self: center;
+    @include button-primary;
+    padding: $spacing-10 $spacing-56;
+    margin-top: $spacing-10;
+  }
+}

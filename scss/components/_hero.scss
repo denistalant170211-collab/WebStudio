@@ -1,0 +1,28 @@
+.hero {
+  background-image:
+    linear-gradient($dark-overlay, $dark-overlay),
+    url("../img/hero-background.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: $spacing-200;
+  padding-bottom: $spacing-200;
+
+  &__container {
+    @include flex-column;
+    align-items: center;
+    gap: $spacing-30;
+  }
+
+  &__title {
+    @include roboto($font-weight-extra-bold, $fs-44, $lh-136, $letter-spacing-06, $light-color);
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 696px;
+  }
+
+  &__button {
+    @include button-primary;
+    padding: $spacing-10 $spacing-32;
+  }
+}

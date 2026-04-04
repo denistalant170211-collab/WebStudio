@@ -1,0 +1,91 @@
+.header {
+  padding-top: $spacing-24;
+  padding-bottom: $spacing-25;
+  border-bottom: 1px solid $gray-border;
+
+  &__container {
+    @include flex-between;
+  }
+
+  &__nav {
+    @include flex-center;
+    gap: $spacing-50;
+  }
+
+  &__list {
+    @include flex-gap($spacing-50);
+    margin-left: $spacing-93;
+
+    &--contacts {
+      @include flex-gap($spacing-50);
+      margin-left: auto;
+    }
+  }
+
+  &__item {
+    
+  }
+
+  &__link {
+    @include roboto($font-weight-medium, $fs-14, 1, $letter-spacing-02, $dark-color);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: $spacing-31;
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+
+    &.active {
+      color: $primary-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $primary-color;
+        border-radius: $border-radius-2;
+        animation: slideIn 300ms $transition-function both;
+      }
+    }
+  }
+
+  &__contact {
+    @include flex-center;
+    gap: $spacing-10;
+    @include roboto($font-weight-medium, $fs-14, 1, $letter-spacing-02, $gray-color);
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+
+      .header__icon {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $gray-color;
+    flex-shrink: 0;
+    @include transition(fill);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
