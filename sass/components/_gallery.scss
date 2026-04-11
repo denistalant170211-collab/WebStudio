@@ -4,292 +4,255 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @include section-padding(200px, 200px);
+
+  &__container {
+    @include flex-center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    @include font-roboto(900, 44px, 136%);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+    max-width: 696px;
+  }
+
+  &__btn {
+    @include btn-primary;
+    padding: 10px 32px;
+  }
 }
 
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.hero-title {
-  @include font-roboto(900, 44px, 136%);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: center;
-  color: $color-white;
-  max-width: 696px;
-}
-
-.hero-button {
-  @include font-roboto(700, 16px, 187%);
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: $color-white;
-  background-color: $color-primary;
-  border-radius: 4px;
-  padding: 10px 32px;
-  border-style: none;
-  cursor: pointer;
-  transition: background-color $transition-base, box-shadow $transition-base;
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: $color-primary-dark;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.about {
-  padding-top: 94px;
-  padding-bottom: 0;
+.features {
+  @include section-padding(94px, 0);
   background-color: $color-white;
+
+  &__list {
+    display: flex;
+    gap: $grid-gap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 94px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 270px;
+      height: 120px;
+      top: 0;
+      left: 0;
+      background-position: center;
+      background-color: $color-bg-section;
+      background-repeat: no-repeat;
+      border-radius: 4px;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url("../img/antenna.webp");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("../img/antenna.webp");
+    }
+
+    &:nth-child(3)::before {
+      background-image: url("../img/diagram.webp");
+    }
+
+    &:nth-child(4)::before {
+      background-image: url("../img/astronaut.webp");
+    }
+  }
+
+  &__subtitle {
+    @include font-roboto(700, 14px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-text;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  &__text {
+    @include font-roboto(400, 14px, 171%);
+    letter-spacing: 0.03em;
+    color: $color-text-secondary;
+  }
 }
 
-.what-we-do {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.services {
+  @include section-padding;
   background-color: $color-white;
-}
 
-.about-list {
-  display: flex;
-  gap: 30px;
-}
+  &__title {
+    @extend %section-title;
+  }
 
-.about-item {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-top: 94px;
-}
+  &__list {
+    display: flex;
+    gap: $grid-gap;
+    justify-content: center;
+  }
 
-.about-item::before {
-  content: "";
-  position: absolute;
-  width: 270px;
-  height: 120px;
-  top: 0;
-  left: 0;
-  background-position: center;
-  background-color: $color-bg-section;
-  background-repeat: no-repeat;
-  border-radius: 4px;
-}
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
 
-.about-item:nth-child(1)::before {
-  background-image: url("../img/antenna.webp");
-}
+  &__img-wrap {
+    position: relative;
+  }
 
-.about-item:nth-child(2)::before {
-  background-image: url("../img/antenna.webp");
-}
+  &__img {
+    width: 370px;
+    height: 294px;
+  }
 
-.about-item:nth-child(3)::before {
-  background-image: url("../img/diagram.webp");
-}
-
-.about-item:nth-child(4)::before {
-  background-image: url("../img/astronaut.webp");
-}
-
-.about-item-2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-list-img {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.about-title {
-  @include font-roboto(700, 36px);
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: $color-text;
-  margin-bottom: 50px;
-}
-
-.about-subtitle {
-  @include font-roboto(700, 14px);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $color-text;
-  margin-bottom: 10px;
-  margin-top: 30px;
-}
-
-.about-text {
-  @include font-roboto(400, 14px, 171%);
-  letter-spacing: 0.03em;
-  color: $color-text-secondary;
-}
-
-.about-img {
-  width: 370px;
-  height: 294px;
-}
-
-.about-img-wrap {
-  position: relative;
-}
-
-.about-img-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 27px 0;
-  @include font-roboto(700, 14px);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: center;
-  color: $color-white;
-  background-color: $color-img-caption-bg;
+  &__img-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 27px 0;
+    @include font-roboto(700, 14px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-img-caption-bg;
+  }
 }
 
 .team {
   background-color: $color-bg-section;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include section-padding;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    display: flex;
+    gap: $grid-gap;
+    justify-content: center;
+  }
+
+  &__item {
+    border-radius: 0 0 4px 4px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-white;
+    padding-bottom: 30px;
+    transition: box-shadow $transition-base;
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__photo {
+    width: 270px;
+    height: 260px;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    @include font-roboto(500, 16px);
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-text;
+    margin-bottom: 10px;
+  }
+
+  &__role {
+    @include font-roboto(400, 16px);
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-text-secondary;
+    margin-bottom: 16px;
+  }
 }
 
-.team-title {
-  @include font-roboto(700, 36px);
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: $color-text;
-  margin-bottom: 50px;
-}
+.social {
+  &__list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
 
-.team-list {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
+  &__item {
+    width: 44px;
+    height: 44px;
+  }
 
-.team-item {
-  border-radius: 0 0 4px 4px;
-  width: 270px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $color-white;
-  padding-bottom: 30px;
-  transition: box-shadow $transition-base;
-}
+  &__link {
+    @extend %social-link;
+    background-color: transparent;
 
-.team-item:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+    &:hover,
+    &:focus {
+      background-color: $color-primary;
 
-.team-img {
-  width: 270px;
-  height: 260px;
-  margin-bottom: 30px;
-}
+      .social__icon {
+        fill: $color-white;
+      }
+    }
+  }
 
-.team-subtitle {
-  @include font-roboto(500, 16px);
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: $color-text;
-  margin-bottom: 10px;
+  &__icon {
+    fill: $color-icon-muted;
+    transition: fill $transition-base;
+  }
 }
-
-.team-text {
-  @include font-roboto(400, 16px);
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: $color-text-secondary;
-  margin-bottom: 16px;
-}
-
-.social-list {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.social-item {
-  width: 44px;
-  height: 44px;
-}
-
-.social-link {
-  @include flex-center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: transparent;
-  transition: background-color $transition-base;
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: $color-primary;
-}
-
-.social-icon {
-  fill: $color-icon-muted;
-  transition: fill $transition-base;
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: $color-white;
-}
-
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include section-padding;
   background-color: $color-white;
-}
 
-.clients-title {
-  @include font-roboto(700, 36px);
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: $color-text;
-  margin-bottom: 50px;
-}
+  &__title {
+    @extend %section-title;
+  }
 
-.clients-list {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
+  &__list {
+    display: flex;
+    gap: $grid-gap;
+    justify-content: center;
+  }
 
-.clients-item {
-  width: 170px;
-  height: 92px;
-}
+  &__item {
+    width: 170px;
+    height: 92px;
+  }
 
-.clients-link {
-  @include flex-center;
-  width: 100%;
-  height: 100%;
-  border: 1px solid $color-icon-muted;
-  border-radius: 4px;
-  transition: border-color $transition-base;
-}
+  &__link {
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color-icon-muted;
+    border-radius: 4px;
+    transition: border-color $transition-base;
 
-.clients-link:hover,
-.clients-link:focus {
-  border-color: $color-primary;
-}
+    &:hover,
+    &:focus {
+      border-color: $color-primary;
 
-.clients-icon {
-  fill: $color-icon-muted;
-  transition: fill $transition-base;
-}
+      .clients__icon {
+        fill: $color-primary;
+      }
+    }
+  }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  fill: $color-primary;
+  &__icon {
+    fill: $color-icon-muted;
+    transition: fill $transition-base;
+  }
 }

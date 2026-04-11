@@ -1,0 +1,65 @@
+@mixin font-roboto($weight, $size, $line-height: normal) {
+  font-family: $font-roboto;
+  font-weight: $weight;
+  font-size: $size;
+
+  @if $line-height != normal {
+    line-height: $line-height;
+  }
+}
+
+@mixin font-raleway($weight, $size) {
+  font-family: $font-raleway;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-title {
+  @include font-roboto(700, 36px);
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $color-text;
+  margin-bottom: 50px;
+}
+
+@mixin social-link-base($bg) {
+  @include flex-center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $bg;
+  transition: background-color $transition-base;
+}
+
+@mixin logo-base {
+  @include font-raleway(700, 26px);
+  letter-spacing: 0.03em;
+}
+
+@mixin btn-primary {
+  @include font-roboto(700, 16px, 187%);
+  letter-spacing: 0.06em;
+  color: $color-white;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color $transition-base, box-shadow $transition-base;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-dark;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@mixin section-padding($top: 94px, $bottom: 94px) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}

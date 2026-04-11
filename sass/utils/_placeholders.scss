@@ -1,0 +1,61 @@
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+%section-title {
+  @include font-roboto(700, 36px);
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $color-text;
+  margin-bottom: 50px;
+}
+
+%logo-shared {
+  @include font-raleway(700, 26px);
+  letter-spacing: 0.03em;
+}
+
+%social-link {
+  @include flex-center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color $transition-base;
+}
+
+%input-base {
+  border-radius: 4px;
+  outline: none;
+  transition: border-color $transition-base;
+  font-family: $font-roboto;
+  font-size: 14px;
+  font-weight: 400;
+
+  &:hover,
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+%overlay-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%section-label {
+  @include font-roboto(700, 14px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 20px;
+}

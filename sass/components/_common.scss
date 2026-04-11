@@ -3,9 +3,9 @@ body {
 }
 
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: $container-width;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
   margin-left: auto;
   margin-right: auto;
 }

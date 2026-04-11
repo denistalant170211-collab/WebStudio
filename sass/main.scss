@@ -1,5 +1,7 @@
 @import "./utils/variables";
-@import "./utils/mixin";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
 @import "./components/reset";
 @import "./components/common";
 @import "./components/header";
