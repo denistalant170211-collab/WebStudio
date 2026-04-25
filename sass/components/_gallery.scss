@@ -4,7 +4,18 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  @include section-padding(200px, 200px);
+  @include section-padding(118px, 118px);
+  text-align: center;
+
+  @include md {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  @include lg {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   &__container {
     @include flex-center;
@@ -13,27 +24,56 @@
   }
 
   &__title {
-    @include font-roboto(900, 44px, 136%);
+    @include font-roboto(900, 26px, 136%);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
     color: $color-white;
-    max-width: 696px;
+    max-width: 360px;
+
+    @include sm {
+      font-size: 36px;
+      max-width: 480px;
+    }
+
+    @include lg {
+      font-size: 44px;
+      max-width: 696px;
+    }
   }
 
   &__btn {
     @include btn-primary;
-    padding: 10px 32px;
+    padding: 10px 24px;
+
+    @include lg {
+      padding: 10px 32px;
+    }
   }
 }
 
 .features {
-  @include section-padding(94px, 0);
+  @include section-padding(60px, 60px);
   background-color: $color-white;
+
+  @include lg {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__list {
     display: flex;
+    flex-direction: column;
     gap: $grid-gap;
+
+    @include md {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include lg {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
@@ -41,11 +81,20 @@
     flex-direction: column;
     position: relative;
     padding-top: 94px;
+    width: 100%;
+
+    @include md {
+      width: calc((100% - #{$grid-gap}) / 2);
+    }
+
+    @include lg {
+      width: calc((100% - #{$grid-gap * 3}) / 4);
+    }
 
     &::before {
       content: "";
       position: absolute;
-      width: 270px;
+      width: 100%;
       height: 120px;
       top: 0;
       left: 0;
@@ -60,7 +109,7 @@
     }
 
     &:nth-child(2)::before {
-      background-image: url("../img/antenna.webp");
+      background-image: url("../img/clock.webp");
     }
 
     &:nth-child(3)::before {
@@ -79,6 +128,10 @@
     color: $color-text;
     margin-bottom: 10px;
     margin-top: 30px;
+
+    @include below-md {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -89,8 +142,13 @@
 }
 
 .services {
-  @include section-padding;
-  background-color: $color-white;
+  display: none;
+
+  @include lg {
+    display: block;
+    @include section-padding(0, 94px);
+    background-color: $color-white;
+  }
 
   &__title {
     @extend %section-title;
@@ -133,7 +191,12 @@
 
 .team {
   background-color: $color-bg-section;
-  @include section-padding;
+  @include section-padding(60px, 60px);
+
+  @include lg {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__title {
     @extend %section-title;
@@ -141,19 +204,42 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: $grid-gap;
-    justify-content: center;
+
+    @include md {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include lg {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
     border-radius: 0 0 4px 4px;
-    width: 270px;
+    width: 100%;
+    max-width: 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $color-white;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
     transition: box-shadow $transition-base;
+
+    @include md {
+      width: calc((100% - #{$grid-gap}) / 2);
+      max-width: 354px;
+      padding-bottom: 30px;
+    }
+
+    @include lg {
+      width: 270px;
+      max-width: none;
+    }
 
     &:hover {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -161,8 +247,8 @@
   }
 
   &__photo {
-    width: 270px;
-    height: 260px;
+    width: 100%;
+    height: auto;
     margin-bottom: 30px;
   }
 
@@ -214,9 +300,15 @@
     transition: fill $transition-base;
   }
 }
+
 .clients {
-  @include section-padding;
+  @include section-padding(60px, 60px);
   background-color: $color-white;
+
+  @include lg {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__title {
     @extend %section-title;
@@ -224,13 +316,26 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: $grid-gap;
     justify-content: center;
+
+    @include lg {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
-    width: 170px;
+    width: calc((100% - #{$grid-gap}) / 2);
     height: 92px;
+
+    @include md {
+      width: calc((100% - #{$grid-gap * 2}) / 3);
+    }
+
+    @include lg {
+      width: 170px;
+    }
   }
 
   &__link {
@@ -254,5 +359,6 @@
   &__icon {
     fill: $color-icon-muted;
     transition: fill $transition-base;
+    max-width: 90%;
   }
 }

@@ -10,16 +10,25 @@
 }
 
 %section-title {
-  @include font-roboto(700, 36px);
+  @include font-roboto(700, 28px);
   letter-spacing: 0.03em;
   text-align: center;
   color: $color-text;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @include md {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 %logo-shared {
-  @include font-raleway(700, 26px);
+  @include font-raleway(700, 24px);
   letter-spacing: 0.03em;
+
+  @include lg {
+    font-size: 26px;
+  }
 }
 
 %social-link {

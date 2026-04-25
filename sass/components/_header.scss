@@ -1,50 +1,69 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid $color-border-header;
+
+  @include md {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @include lg {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
-    @include logo-base;
+    @extend %logo-shared;
     color: $color-primary;
   }
 
   &__logo-accent {
-    @include logo-base;
+    @extend %logo-shared;
     color: $color-black;
   }
 
- 
   &__nav {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    display: none;
+
+    @include md {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__nav-list {
     display: flex;
     gap: 50px;
-    margin-left: 93px;
+    margin-left: 88px;
+
+    @include lg {
+      margin-left: 93px;
+    }
   }
 
-  
   &__nav-link {
     @include font-roboto(500, 14px);
     letter-spacing: 0.02em;
     color: $color-text;
     position: relative;
-    padding-bottom: 31px;
+    padding-bottom: 28px;
     transition: color $transition-base;
+
+    @include lg {
+      padding-bottom: 31px;
+    }
 
     &:hover {
       color: $color-primary;
     }
 
-    
     &--active {
       color: $color-primary;
 
@@ -63,18 +82,32 @@
   }
 
   &__contacts-list {
-    display: flex;
-    gap: 50px;
-    margin-left: auto;
+    display: none;
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    @include lg {
+      flex-direction: row;
+      gap: 50px;
+    }
   }
 
   &__contact-link {
     @include flex-center;
     gap: 10px;
-    @include font-roboto(500, 14px);
+    @include font-roboto(500, 12px);
     letter-spacing: 0.02em;
     color: $color-text-secondary;
     transition: color $transition-base;
+
+    @include lg {
+      font-size: 14px;
+    }
 
     &:hover {
       color: $color-primary;
@@ -90,6 +123,27 @@
     flex-shrink: 0;
     transition: fill $transition-base;
   }
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+
+    @include md {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: $color-text;
+    }
+  }
 }
 
 @keyframes slideIn {
@@ -97,7 +151,6 @@
     transform: scaleX(0);
     transform-origin: left;
   }
-
   to {
     transform: scaleX(1);
     transform-origin: left;

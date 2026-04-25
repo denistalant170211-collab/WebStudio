@@ -2,7 +2,6 @@
   font-family: $font-roboto;
   font-weight: $weight;
   font-size: $size;
-
   @if $line-height != normal {
     line-height: $line-height;
   }
@@ -18,28 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@mixin section-title {
-  @include font-roboto(700, 36px);
-  letter-spacing: 0.03em;
-  text-align: center;
-  color: $color-text;
-  margin-bottom: 50px;
-}
-
-@mixin social-link-base($bg) {
-  @include flex-center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: $bg;
-  transition: background-color $transition-base;
-}
-
-@mixin logo-base {
-  @include font-raleway(700, 26px);
-  letter-spacing: 0.03em;
 }
 
 @mixin btn-primary {
@@ -59,7 +36,26 @@
   }
 }
 
-@mixin section-padding($top: 94px, $bottom: 94px) {
+@mixin section-padding($top: 60px, $bottom: 60px) {
   padding-top: $top;
   padding-bottom: $bottom;
+}
+
+@mixin sm {
+  @media screen and (min-width: #{$bp-sm}) { @content; }
+}
+@mixin md {
+  @media screen and (min-width: #{$bp-md}) { @content; }
+}
+@mixin lg {
+  @media screen and (min-width: #{$bp-lg}) { @content; }
+}
+@mixin sm-only {
+  @media screen and (min-width: #{$bp-sm}) and (max-width: #{$bp-md - 1px}) { @content; }
+}
+@mixin md-only {
+  @media screen and (min-width: #{$bp-md}) and (max-width: #{$bp-lg - 1px}) { @content; }
+}
+@mixin below-md {
+  @media screen and (max-width: #{$bp-md - 1px}) { @content; }
 }

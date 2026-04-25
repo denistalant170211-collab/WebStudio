@@ -4,13 +4,30 @@
 
   &__container {
     display: flex;
-    align-items: flex-start;
-    gap: 70px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    text-align: center;
+
+    @include md {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-around;
+      text-align: left;
+    }
+
+    @include lg {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 70px;
+    }
   }
 
-
   &__info {
-  
+    @include md {
+      flex-shrink: 0;
+    }
   }
 
   &__logo {
@@ -52,16 +69,30 @@
   }
 
   &__social {
-    padding-top: 12px;
+    padding-top: 0;
+
+    @include md {
+      padding-top: 12px;
+    }
   }
 
   &__social-title {
     @extend %section-label;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
   }
 
   &__social-list {
     display: flex;
     gap: 10px;
+    justify-content: center;
+
+    @include md {
+      justify-content: flex-start;
+    }
   }
 
   &__social-item {
@@ -85,29 +116,59 @@
   }
 
   &__subscribe {
-    padding-top: 12px;
-    margin-left: auto;
+    width: 100%;
+
+    @include md {
+      padding-top: 12px;
+      width: auto;
+    }
+
+    @include lg {
+      margin-left: auto;
+      width: auto;
+    }
   }
 
   &__subscribe-title {
     @extend %section-label;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
   }
 
   &__subscribe-form {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+
+    @include md {
+      flex-direction: row;
+      gap: 12px;
+    }
   }
 
   &__subscribe-input {
     @extend %input-base;
-    width: 358px;
+    width: 100%;
+    max-width: 450px;
     height: 50px;
     border: 1px solid $color-footer-input-border;
     background-color: transparent;
     padding: 0 16px;
     font-size: 16px;
     color: $color-white;
+
+    @include md {
+      width: 260px;
+      max-width: none;
+    }
+
+    @include lg {
+      width: 358px;
+    }
 
     &::placeholder {
       color: $color-footer-contact;
@@ -119,6 +180,7 @@
     @include flex-center;
     gap: 10px;
     padding: 10px 28px;
+    white-space: nowrap;
   }
 
   &__subscribe-icon {

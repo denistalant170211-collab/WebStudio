@@ -6,21 +6,12 @@
   height: 100%;
   background-color: $color-backdrop;
   @include flex-center;
+  padding: 15px;
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
   transition: opacity $transition-base, visibility $transition-base;
-
-  &--hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-
-    .modal {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-  }
+  overflow-y: auto;
 
   &.is-hidden {
     visibility: hidden;
@@ -42,11 +33,17 @@
   position: relative;
   background-color: $color-white;
   border-radius: 4px;
-  padding: 40px;
-  width: 528px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 450px;
   transform: scale(1);
   opacity: 1;
   transition: transform $transition-base, opacity $transition-base;
+
+  @include sm {
+    padding: 40px;
+    max-width: 528px;
+  }
 
   &__close {
     position: absolute;
@@ -76,11 +73,15 @@
   }
 
   &__title {
-    @include font-roboto(700, 20px);
+    @include font-roboto(700, 18px);
     letter-spacing: 0.03em;
     text-align: center;
     color: $color-text;
     margin-bottom: 12px;
+
+    @include sm {
+      font-size: 20px;
+    }
   }
 
   &__form {
@@ -120,28 +121,12 @@
     border: 1px solid $color-input-border;
     padding-left: 42px;
 
-    &--valid {
-      border-color: $color-success;
-    }
-
-    &--invalid {
-      border-color: $color-error;
-
-      & ~ .modal__error {
-        display: block;
-      }
-    }
-
-    &.valid {
-      border-color: $color-success;
-    }
+    &.valid { border-color: $color-success; }
 
     &.invalid {
       border-color: $color-error;
 
-      & ~ .modal__error {
-        display: block;
-      }
+      & ~ .modal__error { display: block; }
     }
   }
 
@@ -171,17 +156,10 @@
     resize: none;
     color: $color-text;
 
-    &::placeholder {
-      color: $color-placeholder;
-    }
+    &::placeholder { color: $color-placeholder; }
 
-    &.valid {
-      border-color: $color-success;
-    }
-
-    &.invalid {
-      border-color: $color-error;
-    }
+    &.valid { border-color: $color-success; }
+    &.invalid { border-color: $color-error; }
   }
 
   &__checkbox-wrap {
@@ -204,13 +182,17 @@
   }
 
   &__checkbox-label {
-    @include font-roboto(400, 14px, 171%);
+    @include font-roboto(400, 12px, 171%);
     letter-spacing: 0.03em;
     color: $color-text-secondary;
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
+
+    @include sm {
+      font-size: 14px;
+    }
 
     &::before {
       content: "";
@@ -225,7 +207,6 @@
         background-image $transition-base;
     }
 
-    &--invalid::before,
     &.invalid-check::before {
       border-color: $color-error;
     }
