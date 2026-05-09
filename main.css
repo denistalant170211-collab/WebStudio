@@ -108,6 +108,7 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -276,7 +277,7 @@ body {
   }
 }
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/hero-background.webp");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/hero-background.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
