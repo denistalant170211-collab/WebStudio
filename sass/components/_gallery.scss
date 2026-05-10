@@ -1,6 +1,6 @@
 .hero {
   background-image: linear-gradient($color-hero-overlay, $color-hero-overlay),
-    url("../img/hero-background.webp");
+    url("./img/hero-background.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,19 +105,19 @@
     }
 
     &:nth-child(1)::before {
-      background-image: url("../img/antenna.webp");
+      background-image: url("./img/antenna.webp");
     }
 
     &:nth-child(2)::before {
-      background-image: url("../img/clock.webp");
+      background-image: url("./img/clock.webp");
     }
 
     &:nth-child(3)::before {
-      background-image: url("../img/diagram.webp");
+      background-image: url("./img/diagram.webp");
     }
 
     &:nth-child(4)::before {
-      background-image: url("../img/astronaut.webp");
+      background-image: url("./img/astronaut.webp");
     }
   }
 
